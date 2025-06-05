@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Dashboard</title>
+    <script>
+    (function () {
+      const theme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+      if (theme === 'dark' || (!theme && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    })();
+  </script>
+
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+</head>
+ <body class="bg-white text-black dark:bg-[#1e1f29] dark:text-white min-h-screen font-sans pt-5 transition-colors duration-300">
+      <header class="max-w-6xl container mx-auto h-52 bg-white dark:bg-[#252b43]">
+      
+  <div class="max-w-5xl mx-auto p-6 ">
+       <div class="flex items-center justify-between mb-8">
+        <div>
+          <h1 class="text-2xl md:text-3xl font-bold">Social Media Dashboard</h1>
+          <p class="text-gray-400">Total Followers: 23,004</p>
+        </div>
+       
+      <button id="darkToggle" class="text-xl text-gray-50 mr-6">
+          <i id="darkIcon" class="fas fa-moon"></i> <!-- 🔥 Add this id -->
+      </button>
+  </div> 
+
+       <!-- Top Cards  -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-9 mb-10 mt-16">
+         <div class="bg-white dark:bg-[#252b43] p-6 rounded-lg border-t-4 border-blue-500">
+          <div class=" flex flex-row items-center justify-center space-x-2">
+             <i class="fab fa-facebook-square text-2xl text-blue-400"></i>
+            <p class="text-center text-sm text-gray-400">@nathanf </p>
+            
+          </div>
+          <h2 class="text-4xl font-bold text-center my-2">1987</h2>
+          <p class="text-center text-xs text-gray-400">FOLLOWERS</p>
+          <p class="text-center text-green-400 text-sm mt-2">▲ 12 Today</p>
+        </div> 
+        
+
+         <div class="bg-white dark:bg-[#252b43] p-6 rounded-lg border-t-4 border-blue-500">
+          <div class="flex justify-center items-center space-x-2">
+             <i class="fab fa-twitter text-blue-500 text-2xl"></i> 
+              <p class="text-center text-sm text-gray-400">@nathanf</p>
+          </div>
+       
+            
+           
+          <h2 class="text-4xl font-bold text-center my-2">1044</h2>
+          <p class="text-center text-xs text-gray-400">FOLLOWERS</p>
+          <p class="text-center text-green-400 text-sm mt-2">▲ 99 Today</p>
+        </div>
+         <div class="bg-[#252b43] p-6 rounded-lg border-t-4 border-pink-500">
+          <div class="flex justify-center items-center space-x-2">
+              <i class="text-pink-400 fab fa-instagram-square text-2xl"></i> 
+              <p class="text-center text-sm text-gray-400">@realnathanf</p>
+          </div>
+      
+          <h2 class="text-4xl font-bold text-center my-2">11k</h2>
+          <p class="text-center text-xs text-gray-400">FOLLOWERS</p>
+          <p class="text-center text-green-400 text-sm mt-2">▲ 1099 Today</p>
+        </div> 
+
+         <div class="bg-white dark:bg-[#252b43] p-6 rounded-lg border-t-4 border-red-500">
+          <div class="flex space-x-2 justify-center">
+             <i class="fab fa-youtube-square text-2l text-red-500 items-center"></i>
+             <p class="text-center text-sm text-gray-400"> Nathan F.</p>
+          </div>
+          <h2 class="text-4xl font-bold text-center my-2">8239</h2>
+          <p class="text-center text-xs dark:text-gray-400">SUBSCRIBERS</p>
+          <p class="text-center text-red-400 text-sm mt-2">▼ 144 Today</p>
+        </div>
+      </div>
+
+      <!-- Overview Today -->
+       <h2 class="text-xl font-bold mb-4">Overview - Today</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        
+        <div class="bg-[#252b43] p-5 rounded-lg">
+
+      <div class="md:flex flex-col">          
+        <div class="text-sm text-gray-400 flex justify-between items-center">
+          <div><p>Page Views</p></div>
+          <div><span class="fab fa-facebook-square text-2xl text-blue-500"></span></div>
+       </div>
+          
+         <div class="text-2xl font-bold flex justify-between mt-8">
+            <div><h2>87 </h2></div>
+             <div><span class="text-green-400 text-sm"> ▲ 3%</span></div>
+         </div> 
+         
+      </div>
+      <!-- the main container -->
+</div>
+
+         <div class="bg-white dark:bg-[#252b43] p-4 rounded-lg">
+          <div class="md:flex flex-col">          
+        <div class="text-sm text-gray-400 flex justify-between items-center">
+          <div><p>Page Views</p></div>
+          <div><span class="fab fa-facebook-square text-2xl text-blue-500"></span></div>
+       </div>
+          
+         <div class="text-2xl font-bold flex justify-between mt-8">
+            <div><h2 > 52 </h2></div>
+             <div><span class="text-green-400 text-sm"> ▲ 2%</span></div>
+         </div> 
+         
+      </div>
+        </div>
+
+
+        <div class="bg-[#252b43] p-4 rounded-lg">
+          <div class="md:flex flex-col">          
+        <div class="text-sm text-gray-400 flex justify-between items-center">
+          <div><p>Likes</p></div>
+          <div><span class="fab fa-instagram text-2xl text-pink-400"></span></div>
+       </div>
+          
+         <div class="text-2xl font-bold flex justify-between mt-8">
+            <div><h2> 5462 </h2></div>
+             <div><span class="text-green-400 text-sm"> ▲ 225%</span></div>
+         </div> 
+         
+      </div>
+        </div> 
+        
+         <div class="bg-[#252b43] p-4 rounded-lg">
+          <div class="md:flex flex-col">          
+        <div class="text-sm text-gray-400 flex justify-between items-center">
+          <div><p>likes</p></div>
+          <div><span class="fab fa-instagram text-2xl text-pink-400"></span></div>
+       </div>
+          
+         <div class="text-2xl font-bold flex justify-between mt-8">
+            <div><h2 >52k </h2></div>
+             <div><span class="text-green-400 text-sm"> ▲ 1375%</span></div>
+         </div> 
+         
+      </div>
+        </div>
+
+
+         <div class="bg-[#252b43] p-4 rounded-lg">
+         <div class="md:flex flex-col">          
+        <div class="text-sm text-gray-400 flex justify-between items-center">
+          <div><p>Retweets</p></div>
+          <div><span class="fab fa-twitter text-2xl text-blue-500"></span></div>
+       </div>
+          
+         <div class="text-2xl font-bold flex justify-between mt-8">
+            <div><h2 >117</h2></div>
+             <div><span class="text-green-400 text-sm">▲ 303%</span></div>
+         </div> 
+         
+      </div>
+        </div>
+
+
+         <div class="bg-[#252b43] p-4 rounded-lg">
+          <div class="md:flex flex-col">          
+        <div class="text-sm text-gray-400 flex justify-between items-center">
+          <div><p>Page Views</p></div>
+          <div><span class="fab fa-twitter text-2xl text-blue-500"></span></div>
+       </div>
+          
+         <div class="text-2xl font-bold flex justify-between mt-8">
+            <div><h2 > 507 </h2></div>
+             <div><span class="text-green-400 text-sm"> ▲ 553%</span></div>
+         </div> 
+         
+      </div>
+        </div> 
+
+         <div class="bg-[#252b43] p-4 rounded-lg">
+          <div class="md:flex flex-col">          
+        <div class="text-sm text-gray-400 flex justify-between items-center">
+          <div><p>Page Views</p></div>
+          <div><span class="fab fa-youtube-square text-2xl text-red-500"></span></div>
+       </div>
+          
+         <div class="text-2xl font-bold flex justify-between mt-8">
+            <div><h2 > 107 </h2></div>
+             <div><span class="text-green-400 text-sm"> ▲ 19%</span></div>
+         </div> 
+         
+      </div>
+        </div>
+
+        <div class="bg-[#252b43] p-4 rounded-lg">
+         <div class="md:flex flex-col">          
+        <div class="text-sm text-gray-400 flex justify-between items-center">
+          <div><p>Page Views</p></div>
+          <div><span class="fab fa-youtube-square text-2xl text-red-500"></span></div>
+       </div>
+          
+         <div class="text-2xl font-bold flex justify-between mt-8">
+            <div><h2 >1407</h2></div>
+             <div><span class="text-green-400 text-sm"> ▲ 12%</span></div>
+         </div> 
+         
+      </div>
+        </div> 
+     </div>
+    </div>
+</div>
+    
+</header>
+
+  <!-- Dark Mode Toggle Script -->
+<script>
+    const toggle = document.getElementById('darkToggle');
+    const icon = document.getElementById('darkIcon');
+    const root = document.documentElement;
+
+    function updateIcon() {
+      icon.className = root.classList.contains('dark') ? 'fas fa-sun' : 'fas fa-moon';
+    }
+
+    // Set correct icon on page load
+    updateIcon();
+
+    toggle.addEventListener('click', () => {
+      root.classList.toggle('dark');
+      localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
+      updateIcon();
+    });
+  </script> 
+  </body>
+
+  </html>
